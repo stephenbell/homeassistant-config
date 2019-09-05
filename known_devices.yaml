@@ -1,0 +1,168 @@
+
+epson22ae76:
+  hide_if_away: true
+  icon:
+  mac: 9C:AE:D3:22:AE:76
+  name: EPSON22AE76
+  picture:
+  track: true
+
+desktop_v4ctqil:
+  hide_if_away: true
+  icon:
+  mac: 70:8B:CD:54:5A:6B
+  name: DESKTOP-V4CTQIL
+  picture:
+  track: true
+
+samsung_galaxy_s7:
+  hide_if_away: true
+  icon:
+  mac: 8C:F5:A3:57:A7:5B
+  name: Samsung-Galaxy-S7
+  picture:
+  track: true
+
+iphone_x:
+  hide_if_away: true
+  icon:
+  mac: 54:33:CB:BA:38:15
+  name: iPhone-X
+  picture:
+  track: true
+
+mybox:
+  hide_if_away: true
+  icon:
+  mac: AC:BC:32:94:68:99
+  name: mybox
+  picture:
+  track: true
+
+scf1e805:
+  hide_if_away: true
+  icon:
+  mac: 00:0E:8F:F1:E8:05
+  name: SCF1E805
+  picture:
+  track: true
+
+pops_think:
+  hide_if_away: true
+  icon:
+  mac: 84:3A:4B:0A:5B:50
+  name: pops-THINK
+  picture:
+  track: true
+
+iphone:
+  hide_if_away: true
+  icon:
+  mac: B8:B2:F8:EB:52:BF
+  name: iPhone
+  picture:
+  track: true
+
+5c_a3_9d_18_fd_c8:
+  hide_if_away: true
+  icon:
+  mac: 5C:A3:9D:18:FD:C8
+  name: 5c:a3:9d:18:fd:c8
+  picture:
+  track: true
+
+desktop_bqsu1f3:
+  hide_if_away: true
+  icon:
+  mac: 60:45:CB:6B:28:84
+  name: DESKTOP-BQSU1F3
+  picture:
+  track: true
+
+micahs_mbp:
+  hide_if_away: true
+  icon:
+  mac: 28:CF:E9:1E:01:A1
+  name: Micahs-MBP
+  picture:
+  track: true
+
+briannes_iphone:
+  hide_if_away: true
+  icon:
+  mac: FC:18:3C:C2:CC:60
+  name: Briannes-iPhone
+  picture:
+  track: true
+
+galaxy_s10:
+  hide_if_away: true
+  icon:
+  mac: D4:53:83:AD:1C:E0
+  name: Galaxy-S10
+  picture:
+  track: true
+
+5c_a3_9d_18_2a_48:
+  hide_if_away: true
+  icon:
+  mac: 5C:A3:9D:18:2A:48
+  name: 5c:a3:9d:18:2a:48
+  picture:
+  track: true
+
+b8_27_eb_77_0a_71:
+  hide_if_away: true
+  icon:
+  mac: B8:27:EB:77:0A:71
+  name: B8:27:EB:77:0A:71
+  picture:
+  track: true
+
+diannas_air:
+  hide_if_away: true
+  icon:
+  mac: E0:AC:CB:6C:06:AE
+  name: Diannas-Air
+  picture:
+  track: true
+
+abee_zs_phone:
+  hide_if_away: true
+  icon:
+  mac: 54:33:CB:A5:27:70
+  name: ABee-Zs-Phone
+  picture:
+  track: true
+
+desktop_stephen:
+  hide_if_away: true
+  icon:
+  mac: E0:D5:5E:6D:65:D9
+  name: DESKTOP-STEPHEN
+  picture:
+  track: true
+
+laptop_jqj91o2p:
+  hide_if_away: true
+  icon:
+  mac: A4:02:B9:99:D7:70
+  name: LAPTOP-JQJ91O2P
+  picture:
+  track: true
+
+ac_bc_32_7e_8c_a0:
+  hide_if_away: true
+  icon:
+  mac: AC:BC:32:7E:8C:A0
+  name: AC:BC:32:7E:8C:A0
+  picture:
+  track: true
+
+e0_d5_5e_79_de_52:
+  hide_if_away: true
+  icon:
+  mac: E0:D5:5E:79:DE:52
+  name: e0:d5:5e:79:de:52
+  picture:
+  track: true

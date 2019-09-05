@@ -1,0 +1,106 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret elevation_home
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Denver
+  # C for Celcius, F for Fahrenheit
+  temperature_unit: F
+  # Customization file
+  customize: !include customize.yaml
+
+# Enables the frontend
+frontend: !include frontend.yaml
+
+# Cameras
+camera:
+  - platform: mjpeg
+    name: iCam
+    mjpeg_url: !secret cam_url
+
+# Enables configuration UI
+config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: !secret base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+
+# Presence detection by looking at connected devices to an Xfinity gateway
+#device_tracker:
+ # - platform: xfinity
+ #   host: 192.168.0.1
+ #   new_device_defaults:
+#      track_new_devices: true
+ #     hide_if_away: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
+
+# Enables support for tracking state changes over time
+history: !include history.yaml
+
+influxdb:
+  host: a0d7b954-influxdb
+  port: 8086
+  database: !secret influxdb
+  username: !secret influxdb_username
+  password: !secret influxdb_password
+  max_retries: 3
+  default_measurement: state
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+#map:
+
+# Additional panel links
+panel_iframe:
+  grafana:
+    title: Grafana
+    icon: mdi:chart-timeline
+    url: !secret grafana_url
+
+# Component responsible for storing details in a database
+recorder:
+  purge_keep_days: 5
+
+# Track the sun
+sun:
+
+# Sensors
+sensor: !include sensors.yaml
+
+# Enables the system health component in the developer tools under "i"
+system_health:
+
+# Weather
+weather:
+  - platform: darksky
+    api_key: !secret darksky
+    mode: daily
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+switch: !include switches.yaml 

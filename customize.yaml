@@ -1,0 +1,90 @@
+# Sensors
+sensor.hassbian_cpu_temperature:
+  friendly_name: CPU Temperature
+sensor.hassbian_db_file_size:
+  friendly_name: DB file size
+sensor.hassbian_disk_free:
+  friendly_name: Disk free /
+sensor.hassbian_memory_free:
+  friendly_name: Memory free
+sensor.hassbian_memory_use_percent:
+  friendly_name: Memory use
+sensor.hassbian_swap_use_percent:
+  friendly_name: Swap use
+sensor.hassbian_processor_use:
+  friendly_name: Processor Use
+sensor.hassbian_disk_use_percent_home:
+  friendly_name: Disk use /home
+sensor.memory_use_percent:
+  friendly_name: Memory use
+sensor.swap_use_percent:
+  friendly_name: Swap use
+sensor.disk_use_percent_home:
+  friendly_name: Disk use /home
+sensor.db_file_size:
+  friendly_name: DB file size
+sensor.dht_sensor_temperature:
+  friendly_name: Front room Temp
+sensor.dht_sensor_humidity:
+  friendly_name: Front room Humidity
+  
+
+# Mobile Phones
+device_tracker.iphone:
+  friendly_name: Micah's Mobile
+  icon: mdi:cellphone-iphone
+device_tracker.galaxy_s10:
+  friendly_name: Pops' Mobile
+  icon: mdi:cellphone-android
+device_tracker.iphone_x:
+  friendly_name: Stephen's Mobile
+  icon: mdi:cellphone-iphone
+device_tracker.abee_zs_phone:
+  friendly_name: Austin's Mobile
+  icon: mdi:cellphone-iphone
+
+# Computers
+device_tracker.mybox:
+  friendly_name: Stephen's Macbook Pro
+  icon: mdi:laptop
+device_tracker.micahs_mbp:
+  friendly_name: Micah's Macbook Pro
+  icon: mdi:laptop
+device_tracker.pops_think:
+  friendly_name: Pops' Thinkpad
+  icon: mdi:laptop
+device_tracker.desktop_bqsu1f3:
+  friendly_name: Micah's Desktop
+  icon: mdi:desktop-tower
+device_tracker.desktop_stephen:
+  friendly_name: Stephen's Windows Desktop
+  icon: mdi:desktop-tower
+device_tracker.penguin:
+  friendly_name: Stephen's Linux Desktop
+  icon: mdi:desktop-tower
+device_tracker.desktop_v4ctqil:
+  friendly_name: Pops' Desktop
+  icon: mdi:desktop-tower
+
+# Other Devices
+device_tracker.android_3fb3afdb0218dade:
+  friendly_name: Stephen's Galaxy Tab S
+  icon: mdi:tablet-android
+device_tracker.b8_27_eb_77_0a_71:
+  friendly_name: Stephen's Raspberry Pi 3B+
+  icon: mdi:raspberry-pi
+device_tracker.hassbian:
+  friendly_name: Stephen's Raspberry Pi 2B
+  icon: mdi:raspberry-pi
+device_tracker.epson22ae76:
+  friendly_name: EPSON WF-3620 Printer
+  icon: mdi:printer
+device_tracker.scf1e805:
+  friendly_name: iCamera 1000
+  icon: mdi:cctv
+device_tracker.5c_a3_9d_18_fd_c8:
+  friendly_name: Samsung LED55
+  icon: mdi:television
+device_tracker.5c_a3_9d_18_2a_48:
+  friendly_name: Samsung LED32
+  icon: mdi:television
