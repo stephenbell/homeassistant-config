@@ -1,25 +1,25 @@
   # waze travel time
   
   - platform: waze_travel_time
-    name: "Time to Erie"
+    name: "To Hancocks"
     origin: !secret waze_home
     destination: !secret waze_hancocks
     region: 'US'  
 
   - platform: waze_travel_time
-    name: "Time to Denver"
+    name: "To Micahs"
     origin: !secret waze_home
     destination: !secret waze_micah
     region: 'US' 
 
   - platform: waze_travel_time
-    name: "Time to Montrose"
+    name: "To Austins"
     origin: !secret waze_home
     destination: !secret waze_austin
     region: 'US' 
     
   - platform: waze_travel_time
-    name: "Time to Parachute"
+    name: "To Parachute"
     origin: !secret waze_home
     destination: !secret waze_mike
     region: 'US'     

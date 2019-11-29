@@ -17,27 +17,19 @@ http:
   base_url: !secret base_url
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-# Enables configuration UI
-config:
+# Enables a default set of integrations
+default_config:
 # Discover some devices automatically
 discovery:
-# View all events in a logbook
-logbook:
+# Define devices manually
+media_player:
+  - platform: samsungtv
+    host: 192.168.0.224
+    name: "Samsung TV"
+    mac: "5c:a3:9d:18:fd:c8"
 # Component responsible for storing details in a database
 recorder:
   purge_keep_days: 5
-# Track the sun
-sun:
-# Enables the system health component in the developer tools under "i"
-system_health:
-updater:
-  include_used_components: true
-# Additional panel links
-panel_iframe:
-  grafana:
-    title: Grafana
-    icon: mdi:chart-timeline
-    url: !secret grafana_url
 # Weather
 weather:
   - platform: darksky
