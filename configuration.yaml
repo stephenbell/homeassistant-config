@@ -1,17 +1,4 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
-  name: Home
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  latitude: !secret latitude_home
-  longitude: !secret longitude_home
-  elevation: !secret elevation_home
-  # metric for Metric, imperial for Imperial
-  unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Denver
-  # C for Celcius, F for Fahrenheit
-  temperature_unit: F
-  # Customization file
   customize: !include customize.yaml
 http:
   base_url: !secret base_url
@@ -24,7 +11,7 @@ discovery:
 # Define devices manually
 media_player:
   - platform: samsungtv
-    host: 192.168.0.224
+    host: "192.168.0.224"
     name: "Samsung TV"
     mac: "5c:a3:9d:18:fd:c8"
 # Component responsible for storing details in a database

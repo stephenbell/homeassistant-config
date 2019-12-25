@@ -6,3 +6,4 @@ include:
     - sensor.dht_sensor_temperature
     - sensor.dht_sensor_humidity
     - sun.sun
+    - sensor.rpi_power_status

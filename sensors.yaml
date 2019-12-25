@@ -1,3 +1,8 @@
+  # raspberry pi power supply voltage checker
+
+  - platform: rpi_power
+    text_state: true
+  
   # waze travel time
   
   - platform: waze_travel_time
@@ -21,7 +26,7 @@
   - platform: waze_travel_time
     name: "To Parachute"
     origin: !secret waze_home
-    destination: !secret waze_mike
+    destination: !secret waze_parachute
     region: 'US'     
 
   # system
