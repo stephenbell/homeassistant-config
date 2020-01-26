@@ -43,13 +43,3 @@
   longitude: !secret zone_micahs_longitude
   radius: 100
   icon: mdi:home-heart
-
-
-#==============
-#=== Parachute
-#==============
-- name: Parachute
-  latitude: !secret zone_parachute_latitude
-  longitude: !secret zone_parachute_longitude
-  radius: 500
-  icon: mdi:home-heart
