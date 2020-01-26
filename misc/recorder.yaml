@@ -1,0 +1,28 @@
+#======================
+#=== Database recorder
+#======================
+# Limit the number of tracked entities and length of history.
+#
+# @link https://home-assistant.io/components/recorder/
+#
+purge_keep_days: 3
+include:
+  entities:
+    - sensor.rpi_power_status
+    - sensor.cpu_temp
+    - sensor.processor_use
+    - sensor.disk_use_percent
+    - sensor.memory_use_percent
+    - sensor.latest_available_version
+
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_temperature
+
+    - sensor.dht_sensor_humidity
+    - sensor.dht_sensor_termperature
+
+    - sun.sun
+exclude:
+  domains:
+    - switch
+    - sensors

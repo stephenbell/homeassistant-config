@@ -1,0 +1,11 @@
+#================
+#=== Desktop PCs
+#================
+- platform: wake_on_lan
+  name: Stephen's Desktop
+  mac: !secret mac_addr_desktop_stephen
+
+
+- platform: wake_on_lan
+  name: Pops' Desktop
+  mac: !secret mac_addr_desktop_v4ctqil

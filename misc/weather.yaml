@@ -1,0 +1,8 @@
+#=========================================
+#=== Dark Sky hyper-local weather service
+#=========================================
+# @link https://www.home-assistant.io/integrations/weather.darksky/
+#
+- platform: darksky
+  api_key: !secret api_key_darksky
+  mode: daily

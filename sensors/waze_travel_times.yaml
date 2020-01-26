@@ -1,0 +1,24 @@
+#============================
+#=== Travel routes and times
+#============================
+# @link https://www.home-assistant.io/integrations/waze_travel_time/
+#
+- platform: waze_travel_time
+  name: "To Hancocks"
+  origin: Home
+  destination: Hancocks
+  region: 'US'  
+
+
+- platform: waze_travel_time
+  name: "To Micahs"
+  origin: Home
+  destination: Micahs
+  region: 'US' 
+
+
+- platform: waze_travel_time
+  name: "To Austins"
+  origin: Home
+  destination: Austins
+  region: 'US' 
