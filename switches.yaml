@@ -1,8 +1,0 @@
-  - platform: wake_on_lan
-    name: Stephen's Desktop
-    host: 10.0.0.142
-    mac: !secret desktop_stephen_mac
-  - platform: wake_on_lan
-    name: Pops' Desktop
-    host: 10.0.0.209
-    mac: !secret desktop_v4ctqil_mac

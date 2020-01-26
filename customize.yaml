@@ -1,4 +1,3 @@
-# Sensors
 sensor.hassbian_cpu_temperature:
   friendly_name: CPU Temperature
 sensor.hassbian_db_file_size:
@@ -27,9 +26,6 @@ sensor.dht_sensor_temperature:
   friendly_name: Front room Temp
 sensor.dht_sensor_humidity:
   friendly_name: Front room Humidity
-  
-
-# Mobile Phones
 device_tracker.iphone:
   friendly_name: Micah's Mobile
   icon: mdi:cellphone-iphone
@@ -42,8 +38,6 @@ device_tracker.iphone_x:
 device_tracker.abee_zs_phone:
   friendly_name: Austin's Mobile
   icon: mdi:cellphone-iphone
-
-# Computers
 device_tracker.mybox:
   friendly_name: Stephen's Macbook Pro
   icon: mdi:laptop
@@ -65,8 +59,6 @@ device_tracker.penguin:
 device_tracker.desktop_v4ctqil:
   friendly_name: Pops' Desktop
   icon: mdi:desktop-tower
-
-# Other Devices
 device_tracker.android_3fb3afdb0218dade:
   friendly_name: Stephen's Galaxy Tab S
   icon: mdi:tablet-android
@@ -88,3 +80,5 @@ device_tracker.5c_a3_9d_18_fd_c8:
 device_tracker.5c_a3_9d_18_2a_48:
   friendly_name: Samsung LED32
   icon: mdi:television
+sensor.cpu_temperature: {}
+sensor.cpu_temp: {}
