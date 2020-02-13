@@ -1,6 +1,6 @@
-#
-# Front entry
-#
-  - platform: mjpeg
-    name: iCam
-    mjpeg_url: !secret cam_url_icam1000
+#================
+#=== Front entry
+#================
+- platform: mjpeg
+  name: iCam
+  mjpeg_url: !secret cam_url_icam1000

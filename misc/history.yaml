@@ -1,12 +1,12 @@
 #============
 #=== History
 #============
-# Hide/show events in the History 
+# Include/exclude items from being shown in the History 
 #
 # @link https://www.home-assistant.io/integrations/history/
 #
-use_include_order: True
-include:
-  entities:
-    - sun.sun
-    - sensor.rpi_power_status
+#use_include_order: True
+#include:
+#  entities:
+#    - sun.sun
+#    - sensor.rpi_power_status

@@ -9,3 +9,18 @@
   monitored_conditions:
     - temperature
     - humidity
+
+
+#=====================
+#=== Template sensors
+#=====================
+# @link https://www.home-assistant.io/integrations/template/
+#
+- platform: template
+  sensors:
+
+  #----- Freezing Point
+    freezing_point:
+      value_template: 32
+      friendly_name: Freezing Point
+      unit_of_measurement: '°F'
