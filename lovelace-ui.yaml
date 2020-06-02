@@ -1,0 +1,322 @@
+background: var(--background-image)
+custom_header:
+  background: 'rgba(155, 155, 155, 0.25)'
+  button_text:
+    options: ':'
+  compact_mode: true
+  swipe_animate: fade
+  swipe_prevent_default: true
+title: ''
+views:
+  - badges:
+      - sensor.dht_sensor_temperature
+      - sun.sun
+      - media_player.samsung_un55f8000
+    cards:
+      - current: true
+        details: true
+        entity: weather.openweathermap
+        forecast: true
+        type: 'custom:weather-card'
+      - entities:
+          - entity: sensor.to_hancocks
+          - entity: sensor.to_micahs
+          - entity: sensor.to_austins
+        type: glance
+    icon: 'mdi:home-circle'
+    path: default_view
+    title: Main
+  - badges: []
+    cards:
+      - align_header: left
+        align_state: left
+        animate: true
+        entities:
+          - color: '#d800f5'
+            entity: sensor.owm_temperature
+            index: 0
+            name: Outdoor
+            show_state: true
+            state_adaptive_color: true
+          - color: '#dbe300'
+            entity: sensor.dht_sensor_temperature
+            index: 1
+            name: Indoor
+            show_state: true
+            state_adaptive_color: true
+          - color: '#ff0000'
+            entity: sensor.freezing_point
+            fixed_value: true
+            index: 2
+            show_fill: false
+            show_legend: false
+            show_points: false
+            show_state: true
+            state_adaptive_color: true
+        hours_to_show: 72
+        labels: true
+        line_width: 2
+        name: Temperature (72h)
+        points_per_hour: 4
+        show: null
+        type: 'custom:mini-graph-card'
+      - align_header: left
+        align_state: left
+        animate: true
+        entities:
+          - color: '#00d62b'
+            entity: sensor.owm_humidity
+            index: 0
+            name: Outdoor
+            show_state: true
+            state_adaptive_color: true
+          - color: '#1259f3'
+            entity: sensor.dht_sensor_humidity
+            index: 1
+            name: Indoor
+            show_state: true
+            state_adaptive_color: true
+        hours_to_show: 72
+        labels: true
+        line_width: 2
+        name: Humidity (72h)
+        points_per_hour: 4
+        show: null
+        type: 'custom:mini-graph-card'
+      - entities:
+          - entity: sensor.acc_air_today
+          - entity: sensor.acc_dust_today
+          - entity: sensor.acc_sinus_today
+          - entity: sensor.acc_asthma_today
+          - entity: sensor.acc_tree_pollen_today
+          - entity: sensor.acc_grass_pollen_today
+          - entity: sensor.acc_ragweed_pollen_today
+          - entity: sensor.acc_mold_today
+          - entity: sensor.acc_migraine_today
+          - entity: sensor.acc_arthritis_today
+          - entity: sensor.acc_common_cold_today
+          - entity: sensor.acc_flu_today
+        max: '10'
+        min: '0'
+        severity:
+          - color: green
+            from: 0
+            to: 3
+          - color: orange
+            from: 4
+            to: 5
+          - color: red
+            from: 6
+            to: 10
+        type: 'custom:bar-card'
+      - entities:
+          - entity: sensor.acc_air_tomorrow
+          - entity: sensor.acc_dust_tomorrow
+          - entity: sensor.acc_sinus_tomorrow
+          - entity: sensor.acc_asthma_tomorrow
+          - entity: sensor.acc_tree_pollen_tomorrow
+          - entity: sensor.acc_grass_pollen_tomorrow
+          - entity: sensor.acc_ragweed_pollen_tomorrow
+          - entity: sensor.acc_mold_tomorrow
+          - entity: sensor.acc_migraine_tomorrow
+          - entity: sensor.acc_arthritis_tomorrow
+          - entity: sensor.acc_common_cold_tomorrow
+          - entity: sensor.acc_flu_tomorrow
+        max: '10'
+        min: '0'
+        severity:
+          - color: green
+            from: 0
+            to: 3
+          - color: orange
+            from: 4
+            to: 5
+          - color: red
+            from: 6
+            to: 10
+        type: 'custom:bar-card'
+      - entities:
+          - entity: input_boolean.get_allergies_data
+            name: Get Allergies Data
+          - entity: sensor.acc_data_last_sourced
+          - entity: input_boolean.reset_allergies_sensor
+            name: Load Allergies Data
+        show_header_toggle: false
+        title: Health Triggers
+        type: entities
+      - aspect_ratio: 0%
+        camera_image: camera.radar_wu_colorado
+        entities: []
+        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+        type: picture-glance
+      - entity: sensor.acc_air_today
+        max: 10
+        min: 0
+        severity:
+          green: 0
+          red: 6
+          yellow: 4
+        type: gauge
+    icon: 'mdi:weather-cloudy'
+    title: Weather
+  - badges: []
+    cards:
+      - cards:
+          - entities:
+              - entity: sensor.installed_version
+                icon: 'mdi:home-assistant'
+                name: Hassio Installed Version
+              - entity: sensor.latest_available_version
+                icon: 'mdi:home-assistant'
+                name: Hassio Current Version
+              - entity: sensor.rpi_power_status
+              - entity: sensor.last_boot_date_time
+                icon: 'mdi:calendar'
+              - entity: sensor.rpi_uptime
+                icon: 'mdi:clock-start'
+              - entity: sensor.ha_uptime
+                icon: 'mdi:home-assistant'
+              - entity: sensor.home_assistant_v2_db
+              - entity: sensor.cpu_temp
+                icon: 'mdi:thermometer'
+                max: 150
+                min: 0
+                severity:
+                  - color: green
+                    from: 0
+                    to: 110
+                  - color: orange
+                    from: 111
+                    to: 120
+                  - color: red
+                    from: 121
+                    to: 150
+                type: 'custom:bar-card'
+              - entities:
+                  - sensor.processor_use
+                  - sensor.memory_use_percent
+                  - sensor.disk_use_percent
+                severity:
+                  - color: green
+                    from: 0
+                    to: 60
+                  - color: orange
+                    from: 61
+                    to: 85
+                  - color: red
+                    from: 86
+                    to: 100
+                type: 'custom:bar-card'
+            show_header_toggle: false
+            title: System
+            type: entities
+        type: vertical-stack
+      - cards:
+          - columns: 4
+            entities:
+              - entity: sensor.count_automations
+                icon: 'mdi:autorenew'
+                name: Automations
+              - entity: sensor.count_scripts
+                icon: 'mdi:script-text-outline'
+                name: Scripts
+              - entity: sensor.count_zones
+                icon: 'mdi:map-marker-radius'
+                name: Zones
+              - entity: sensor.count_device_trackers
+                icon: 'mdi:map-marker'
+                name: Device Trackers
+              - entity: sensor.count_switches
+                icon: 'mdi:light-switch'
+                name: Switches
+              - entity: sensor.count_sensors
+                icon: 'mdi:resistor'
+                name: Sensors
+              - entity: sensor.count_binary_sensors
+                icon: 'mdi:unfold-more-horizontal'
+                name: Binary Sensors
+              - entity: sensor.count_input_booleans
+                icon: 'mdi:toggle-switch'
+                name: Input Booleans
+              - entity: sensor.count_input_numbers
+                icon: 'mdi:numeric'
+                name: Input Numbers
+              - entity: sensor.count_input_texts
+                icon: 'mdi:alphabetical'
+                name: Input Texts
+              - entity: sensor.count_input_selects
+                icon: 'mdi:view-list'
+                name: Input Select
+              - entity: sensor.count_input_datetimes
+                icon: 'mdi:calendar-clock'
+                name: Input Date Times
+            title: Component Count
+            type: glance
+        type: vertical-stack
+    icon: 'mdi:monitor-dashboard'
+    title: Systems
+  - badges: []
+    cards:
+      - card:
+          show_header_toggle: false
+          title: TVs
+        entities:
+          - media_player.samsung_un55f8000
+          - media_player.family_room_tv
+        state_filter:
+          - 'on'
+          - 'off'
+        type: entity-filter
+      - entities:
+          - entity: switch.pops_desktop
+          - entity: switch.stephen_s_desktop
+        show_header_toggle: false
+        title: Computer Switches
+        type: entities
+    icon: 'mdi:monitor-cellphone-star'
+    title: Devices
+  - badges: []
+    cards:
+      - camera_image: camera.icam
+        entities: []
+        type: picture-glance
+    icon: 'mdi:cctv'
+    title: Cameras
+  - badges: []
+    cards:
+      - entities:
+          - entity: sensor.to_hancocks
+          - entity: sensor.to_micahs
+          - entity: sensor.to_austins
+          - entity: sensor.to_parachute
+        title: Current Commute
+        type: 'custom:travel-time-card'
+      - align_header: left
+        align_state: left
+        animate: true
+        entities:
+          - entity: sensor.to_austins
+            index: 0
+            name: Austins
+            show_state: true
+            state_adaptive_color: true
+          - entity: sensor.to_micahs
+            index: 1
+            name: Micahs
+            show_state: true
+            state_adaptive_color: true
+          - entity: sensor.to_hancocks
+            index: 2
+            name: Hancocks
+            show_state: true
+            state_adaptive_color: true
+        hours_to_show: 72
+        labels: true
+        line_width: 2
+        name: Historical Travel Time (72h)
+        points_per_hour: 4
+        show: null
+        type: 'custom:mini-graph-card'
+    icon: 'mdi:car'
+    path: commuting
+    title: Commuting

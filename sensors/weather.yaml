@@ -3,8 +3,18 @@
 #=====================
 # @link https://www.home-assistant.io/integrations/darksky/
 #
-- platform: darksky
-  api_key: !secret api_key_darksky
+# - platform: darksky
+#  api_key: !secret api_key_darksky
+#  monitored_conditions:
+#    - temperature 
+#    - humidity
+
+
+# Open Weather Map
+# @link https://www.home-assistant.io/integrations/openweathermap/
+#
+- platform: openweathermap
+  api_key: !secret api_key_openweathermap
   monitored_conditions:
-    - temperature 
+    - temperature
     - humidity
