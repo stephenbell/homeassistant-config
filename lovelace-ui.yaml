@@ -33,7 +33,7 @@ views:
         animate: true
         entities:
           - color: '#d800f5'
-            entity: sensor.owm_temperature
+            entity: sensor.dark_sky_temperature
             index: 0
             name: Outdoor
             show_state: true
@@ -65,7 +65,7 @@ views:
         animate: true
         entities:
           - color: '#00d62b'
-            entity: sensor.owm_humidity
+            entity: sensor.dark_sky_humidity
             index: 0
             name: Outdoor
             show_state: true
