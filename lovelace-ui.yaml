@@ -15,14 +15,15 @@ views:
     cards:
       - current: true
         details: true
-        entity: weather.openweathermap
+        entity: weather.dark_sky
         forecast: true
         type: 'custom:weather-card'
       - entities:
           - entity: sensor.to_hancocks
           - entity: sensor.to_micahs
           - entity: sensor.to_austins
-        type: glance
+          - entity: sensor.to_parachute
+        type: 'custom:travel-time-card'
     icon: 'mdi:home-circle'
     path: default_view
     title: Main
@@ -149,14 +150,6 @@ views:
         entities: []
         image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
         type: picture-glance
-      - entity: sensor.acc_air_today
-        max: 10
-        min: 0
-        severity:
-          green: 0
-          red: 6
-          yellow: 4
-        type: gauge
     icon: 'mdi:weather-cloudy'
     title: Weather
   - badges: []
@@ -289,7 +282,6 @@ views:
           - entity: sensor.to_micahs
           - entity: sensor.to_austins
           - entity: sensor.to_parachute
-        title: Current Commute
         type: 'custom:travel-time-card'
       - align_header: left
         align_state: left
