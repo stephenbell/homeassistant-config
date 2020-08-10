@@ -12,6 +12,7 @@ views:
       - sensor.dht_sensor_temperature
       - sun.sun
       - media_player.samsung_un55f8000
+      - binary_sensor.updater
     cards:
       - current: true
         details: true
@@ -84,67 +85,6 @@ views:
         points_per_hour: 4
         show: null
         type: 'custom:mini-graph-card'
-      - entities:
-          - entity: sensor.acc_air_today
-          - entity: sensor.acc_dust_today
-          - entity: sensor.acc_sinus_today
-          - entity: sensor.acc_asthma_today
-          - entity: sensor.acc_tree_pollen_today
-          - entity: sensor.acc_grass_pollen_today
-          - entity: sensor.acc_ragweed_pollen_today
-          - entity: sensor.acc_mold_today
-          - entity: sensor.acc_migraine_today
-          - entity: sensor.acc_arthritis_today
-          - entity: sensor.acc_common_cold_today
-          - entity: sensor.acc_flu_today
-        max: '10'
-        min: '0'
-        severity:
-          - color: green
-            from: 0
-            to: 3
-          - color: orange
-            from: 4
-            to: 5
-          - color: red
-            from: 6
-            to: 10
-        type: 'custom:bar-card'
-      - entities:
-          - entity: sensor.acc_air_tomorrow
-          - entity: sensor.acc_dust_tomorrow
-          - entity: sensor.acc_sinus_tomorrow
-          - entity: sensor.acc_asthma_tomorrow
-          - entity: sensor.acc_tree_pollen_tomorrow
-          - entity: sensor.acc_grass_pollen_tomorrow
-          - entity: sensor.acc_ragweed_pollen_tomorrow
-          - entity: sensor.acc_mold_tomorrow
-          - entity: sensor.acc_migraine_tomorrow
-          - entity: sensor.acc_arthritis_tomorrow
-          - entity: sensor.acc_common_cold_tomorrow
-          - entity: sensor.acc_flu_tomorrow
-        max: '10'
-        min: '0'
-        severity:
-          - color: green
-            from: 0
-            to: 3
-          - color: orange
-            from: 4
-            to: 5
-          - color: red
-            from: 6
-            to: 10
-        type: 'custom:bar-card'
-      - entities:
-          - entity: input_boolean.get_allergies_data
-            name: Get Allergies Data
-          - entity: sensor.acc_data_last_sourced
-          - entity: input_boolean.reset_allergies_sensor
-            name: Load Allergies Data
-        show_header_toggle: false
-        title: Health Triggers
-        type: entities
       - aspect_ratio: 0%
         camera_image: camera.radar_wu_colorado
         entities: []
@@ -260,6 +200,8 @@ views:
           - 'on'
           - 'off'
         type: entity-filter
+      - type: media-control
+        entity: media_player.chromecast_ultra
       - entities:
           - entity: switch.pops_desktop
           - entity: switch.stephen_s_desktop
