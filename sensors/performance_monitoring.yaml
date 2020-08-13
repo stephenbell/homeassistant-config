@@ -27,8 +27,9 @@
 #=======================
 #=== Raspberry Pi Power
 #=======================
-- platform: rpi_power
-  text_state: true
+# moved to configuration.yaml temporarily as binary_sensor
+#- platform: rpi_power
+#  text_state: true
 
 
 #=============================================

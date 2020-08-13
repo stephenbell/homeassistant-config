@@ -102,7 +102,7 @@ views:
               - entity: sensor.latest_available_version
                 icon: 'mdi:home-assistant'
                 name: Hassio Current Version
-              - entity: sensor.rpi_power_status
+              - entity: binary_sensor.rpi_power_status
               - entity: sensor.last_boot_date_time
                 icon: 'mdi:calendar'
               - entity: sensor.rpi_uptime
@@ -200,8 +200,8 @@ views:
           - 'on'
           - 'off'
         type: entity-filter
-      - type: media-control
-        entity: media_player.chromecast_ultra
+      - entity: media_player.chromecast_ultra
+        type: media-control
       - entities:
           - entity: switch.pops_desktop
           - entity: switch.stephen_s_desktop

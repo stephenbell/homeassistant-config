@@ -27,9 +27,9 @@ default_config:
 #========================================
 # @link https://home-assistant.io/components/discovery/
 #
-discovery:
-  ignore:
-    - igd
+#discovery:
+#  ignore:
+#    - igd
 
 
 #===========================
@@ -123,6 +123,9 @@ script: !include_dir_named scripts/
 #
 sensor: !include_dir_merge_list sensors/
 
+binary_sensor:
+  - platform: rpi_power
+    text_state: true
 
 #=============
 #=== Switches
@@ -146,3 +149,5 @@ weather: !include misc/weather.yaml
 # @link https://home-assistant.io/components/zone/
 #
 zone: !include misc/zones.yaml
+
+scene: !include scenes.yaml
