@@ -19,7 +19,12 @@ include:
     - sensor.dht_sensor_humidity
     - sensor.dht_sensor_termperature
 
+    - sensor.to_hancocks
+    - sensor.to_micahs
+    - sensor.to_austins
+
 exclude:
   domains:
-    - switch
+    - camera
     - sensor
+    - switch
