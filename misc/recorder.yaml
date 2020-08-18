@@ -17,7 +17,7 @@ include:
     - sensor.dark_sky_temperature
 
     - sensor.dht_sensor_humidity
-    - sensor.dht_sensor_termperature
+    - sensor.dht_sensor_temperature
 
     - sensor.to_hancocks
     - sensor.to_micahs
