@@ -3,25 +3,43 @@
 #============================
 # @link https://www.home-assistant.io/integrations/waze_travel_time/
 #
-- platform: waze_travel_time
-  name: "To Hancocks"
-  origin: Home
-  destination: Hancocks
-  region: 'US'
-  avoid_toll_roads: false
 
-
-- platform: waze_travel_time
-  name: "To Micahs"
-  origin: Home
-  destination: Micahs
-  region: 'US' 
-  avoid_toll_roads: true
-
-
+#===============
+#=== To Austins
+#===============
 - platform: waze_travel_time
   name: "To Austins"
   origin: Home
   destination: Austins
-  region: 'US' 
+  region: "US"
+  avoid_toll_roads: true
+
+#================
+#=== To Hancocks
+#================
+- platform: waze_travel_time
+  name: "To Hancocks"
+  origin: Home
+  destination: Hancocks
+  region: "US"
+  avoid_toll_roads: false
+
+#==============
+#=== To Micahs
+#==============
+- platform: waze_travel_time
+  name: "To Micahs"
+  origin: Home
+  destination: Micahs
+  region: "US"
+  avoid_toll_roads: true
+
+#=============
+#=== To Mikes
+#=============
+- platform: waze_travel_time
+  name: "To Mikes"
+  origin: Home
+  destination: Mikes
+  region: "US"
   avoid_toll_roads: true

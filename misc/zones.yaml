@@ -4,42 +4,47 @@
 # @link https://home-assistant.io/components/zone/
 #
 
-
 #=========
 #=== Home
 #=========
 - name: Home
-  latitude: !secret zone_home_latitude
-  longitude: !secret zone_home_longitude
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
   radius: 100
   icon: mdi:home-heart
-
-
-#=============
-#=== Hancocks
-#=============
-- name: Hancocks
-  latitude: !secret zone_hancocks_latitude
-  longitude: !secret zone_hancocks_longitude
-  radius: 100
-  icon: mdi:home-heart
-
 
 #============
 #=== Austins
 #============
 - name: Austins
-  latitude: !secret zone_austins_latitude
-  longitude: !secret zone_austins_longitude
+  latitude: !secret austins_latitude
+  longitude: !secret austins_longitude
   radius: 100
   icon: mdi:home-heart
 
+#=============
+#=== Hancocks
+#=============
+- name: Hancocks
+  latitude: !secret hancocks_latitude
+  longitude: !secret hancocks_longitude
+  radius: 100
+  icon: mdi:home-heart
 
 #===========
 #=== Micahs
 #===========
 - name: Micahs
-  latitude: !secret zone_micahs_latitude
-  longitude: !secret zone_micahs_longitude
+  latitude: !secret micahs_latitude
+  longitude: !secret micahs_longitude
+  radius: 100
+  icon: mdi:home-heart
+
+#==========
+#=== Mikes
+#==========
+- name: Mikes
+  latitude: !secret mikes_latitude
+  longitude: !secret mikes_longitude
   radius: 100
   icon: mdi:home-heart
