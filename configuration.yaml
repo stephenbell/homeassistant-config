@@ -56,12 +56,14 @@ history: !include misc/history.yaml
 # @link https://www.home-assistant.io/docs/configuration/basic/
 #
 homeassistant:
+  allowlist_external_dirs:
+    - !secret allowlist_external_dirs
   customize: !include customize.yaml
   elevation: !secret home_elevation
+  external_url: !secret external_url
+  internal_url: !secret internal_url
   latitude: !secret home_latitude
   longitude: !secret home_longitude
-  whitelist_external_dirs:
-    - !secret homeassistant_whitelist_config
 
 #==========================
 #=== Enable the web server
