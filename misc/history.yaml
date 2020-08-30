@@ -1,12 +1,19 @@
 #============
 #=== History
 #============
-# Include/exclude items from being shown in the History 
+# Include/exclude items from being shown in the History
 #
 # @link https://www.home-assistant.io/integrations/history/
 #
-#use_include_order: True
-#include:
-#  entities:
-#    - sun.sun
-#    - sensor.rpi_power_status
+exclude:
+  domains:
+    - device_tracker
+    - media_player
+    - person
+  entities:
+    - binary_sensor.rpi_power_status
+    - binary_sensor.updater
+    - sensor.to_austins
+    - sensor.to_hancocks
+    - sensor.to_micahs
+    - sensor.to_mikes
