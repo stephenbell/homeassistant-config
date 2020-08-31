@@ -19,9 +19,10 @@ include:
     - sensor.dht_sensor_humidity
     - sensor.dht_sensor_temperature
 
+    - sensor.to_austins
     - sensor.to_hancocks
     - sensor.to_micahs
-    - sensor.to_austins
+    - sensor.to_mikes
 
 exclude:
   domains:
