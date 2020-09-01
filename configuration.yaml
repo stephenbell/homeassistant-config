@@ -61,7 +61,6 @@ homeassistant:
   customize: !include customize.yaml
   elevation: !secret home_elevation
   external_url: !secret external_url
-  internal_url: !secret internal_url
   latitude: !secret home_latitude
   longitude: !secret home_longitude
 
@@ -87,6 +86,11 @@ influxdb: !include misc/influxdb.yaml
 # @link https://home-assistant.io/components/media_player/
 #
 #media_player: !include misc/media_players.yaml
+
+#============
+#=== Logbook
+#============
+logbook: !include misc/logbook.yaml
 
 #======================
 #=== Database recorder
