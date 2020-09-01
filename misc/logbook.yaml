@@ -1,0 +1,11 @@
+#============
+#=== Logbook
+#============
+# Include/exclude items from being shown in the Logbook
+#
+# @link https://www.home-assistant.io/integrations/logbook/
+#
+
+exclude:
+  domains:
+    - media_player
