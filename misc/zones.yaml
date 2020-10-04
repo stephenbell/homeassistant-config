@@ -13,38 +13,37 @@
   radius: 50
   icon: mdi:home-heart
 
-#============
-#=== Austins
-#============
-- name: Austins
-  latitude: !secret austins_latitude
-  longitude: !secret austins_longitude
+#=========
+#=== Erie
+#=========
+- name: erie
+  latitude: !secret erie_latitude
+  longitude: !secret erie_longitude
   radius: 50
   icon: mdi:home-heart
-
 #=============
-#=== Hancocks
+#=== Montrose
 #=============
-- name: Hancocks
-  latitude: !secret hancocks_latitude
-  longitude: !secret hancocks_longitude
+- name: montrose
+  latitude: !secret montrose_latitude
+  longitude: !secret montrose_longitude
   radius: 50
   icon: mdi:home-heart
 
-#===========
-#=== Micahs
-#===========
-- name: Micahs
-  latitude: !secret micahs_latitude
-  longitude: !secret micahs_longitude
+#==============
+#=== Parachute
+#==============
+- name: parachute
+  latitude: !secret parachute_latitude
+  longitude: !secret parachute_longitude
   radius: 50
   icon: mdi:home-heart
 
-#==========
-#=== Mikes
-#==========
-- name: Mikes
-  latitude: !secret mikes_latitude
-  longitude: !secret mikes_longitude
+#=================
+#=== South Denver
+#=================
+- name: south_denver
+  latitude: !secret south_denver_latitude
+  longitude: !secret south_denver_longitude
   radius: 50
   icon: mdi:home-heart

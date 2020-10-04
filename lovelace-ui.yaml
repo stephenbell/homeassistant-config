@@ -20,10 +20,10 @@ views:
         forecast: true
         type: "custom:weather-card"
       - entities:
-          - entity: sensor.to_austins
-          - entity: sensor.to_hancocks
-          - entity: sensor.to_micahs
-          - entity: sensor.to_mikes
+          - entity: sensor.to_erie
+          - entity: sensor.to_montrose
+          - entity: sensor.to_parachute
+          - entity: sensor.to_south_denver
         type: "custom:travel-time-card"
     icon: "mdi:home-circle"
     path: default_view
@@ -220,33 +220,33 @@ views:
   - badges: []
     cards:
       - entities:
-          - entity: sensor.to_austins
-          - entity: sensor.to_hancocks
-          - entity: sensor.to_micahs
-          - entity: sensor.to_mikes
+          - entity: sensor.to_erie
+          - entity: sensor.to_montrose
+          - entity: sensor.to_parachute
+          - entity: sensor.to_south_denver
         type: "custom:travel-time-card"
       - align_header: left
         align_state: left
         animate: true
         entities:
-          - entity: sensor.to_austins
+          - entity: sensor.to_montrose
             index: 0
-            name: Austins
+            name: Montrose
             show_state: true
             state_adaptive_color: true
-          - entity: sensor.to_hancocks
+          - entity: sensor.to_erie
             index: 2
-            name: Hancocks
+            name: Erie
             show_state: true
             state_adaptive_color: true
-          - entity: sensor.to_micahs
+          - entity: sensor.to_south_denver
             index: 1
-            name: Micahs
+            name: South Denver
             show_state: true
             state_adaptive_color: true
-          - entity: sensor.to_mikes
-            index: 2
-            name: Mikes
+          - entity: sensor.to_parachute
+            index: 3
+            name: Parachute
             show_state: true
             state_adaptive_color: true
         hours_to_show: 72

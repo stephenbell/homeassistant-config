@@ -19,10 +19,10 @@ include:
     - sensor.dht_sensor_humidity
     - sensor.dht_sensor_temperature
 
-    - sensor.to_austins
-    - sensor.to_hancocks
-    - sensor.to_micahs
-    - sensor.to_mikes
+    - sensor.to_erie
+    - sensor.to_montrose
+    - sensor.to_parachute
+    - sensor.to_south_denver
 
 exclude:
   domains:

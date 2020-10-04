@@ -13,7 +13,7 @@ exclude:
   entities:
     - binary_sensor.rpi_power_status
     - binary_sensor.updater
-    - sensor.to_austins
-    - sensor.to_hancocks
-    - sensor.to_micahs
-    - sensor.to_mikes
+    - sensor.to_erie
+    - sensor.to_montrose
+    - sensor.to_parachute
+    - sensor.to_south_denver
