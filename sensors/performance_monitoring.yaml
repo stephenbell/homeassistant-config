@@ -5,14 +5,12 @@
   file_paths:
     - /config/home-assistant_v2.db
 
-
 #==============================
 #=== Installed hass.io version
 #==============================
 - platform: version
   name: Installed Version
   source: local
-
 
 #================================
 #=== Latest Available HA Version
@@ -23,7 +21,6 @@
   image: raspberrypi3
   source: hassio
 
-
 #=======================
 #=== Raspberry Pi Power
 #=======================
@@ -31,38 +28,20 @@
 #- platform: rpi_power
 #  text_state: true
 
-
 #=============================================
 #=== Last boot time, Disk, memory & CPU usage
 #=============================================
 - platform: systemmonitor
   resources:
     - type: last_boot
-    - type: disk_use_percent
-      arg: /
-    - type: memory_use_percent
-    - type: processor_use
-
-
-#====================
-#=== CPU Temperature
-#====================
-- platform: command_line
-  name: CPU Temp
-  command: "cat /sys/class/thermal/thermal_zone0/temp"
-  unit_of_measurement: "°C"
-  value_template: '{{ value | multiply(0.001) | round(0) }}'
-
 
 #===================
 #=== System Up Time
 #===================
 - platform: uptime
 
-
 - platform: template
   sensors:
-
     #==========================
     #=== Home Assistant uptime
     #==========================
@@ -86,7 +65,6 @@
           {{ [ phrase(weeks, 'week'), phrase(days, 'day'), phrase(hours, 'hr'), phrase(minutes, 'min') ] | select('!=','') | list | join(', ') }}
         {% endif %}
 
-
     #=========================================
     #=== Raspberry Pi last boot date and time
     #=========================================
@@ -106,7 +84,6 @@
         {% endif %}
 
         {{ as_timestamp(states('sensor.last_boot')) | timestamp_custom('%H:%M on %a') }} {{ date }} {{ as_timestamp(states('sensor.last_boot')) | timestamp_custom('%b %Y') }}
-
 
     #=========================
     #=== Raspberry Pi Up Time
@@ -137,72 +114,70 @@
         {% if last_comma != -1 %}
           {% set text = text[:last_comma] + ' and' + text[last_comma + 1:] %}
         {% endif %}
-        
-        {{ text }}
 
+        {{ text }}
 
 #====================================
 #=== Home Assistant Component counts
 #====================================
 - platform: template
   sensors:
-
-  #----- Count Automations
+    #----- Count Automations
     count_automations:
       entity_id: sensor.date
       value_template: "{{ states.automation | list | length }}"
 
-  #----- Count Scripts
+    #----- Count Scripts
     count_scripts:
       entity_id: sensor.date
       value_template: "{{ states.script| list | length }}"
 
-  #----- Count Device Trackers
+    #----- Count Device Trackers
     count_device_trackers:
       entity_id: sensor.date
       value_template: "{{ states.device_tracker | list | length }}"
 
-  #----- Count Binary Sensors
+    #----- Count Binary Sensors
     count_binary_sensors:
       entity_id: sensor.date
       value_template: "{{ states.binary_sensor| list | length }}"
 
-  #----- Count Sensors
+    #----- Count Sensors
     count_sensors:
       entity_id: sensor.date
       value_template: "{{ states.sensor | list | length }}"
 
-  #----- Count Switches
+    #----- Count Switches
     count_switches:
       entity_id: sensor.date
       value_template: "{{ states.switch | list | length }}"
 
-  #----- Count Zones
+    #----- Count Zones
     count_zones:
       entity_id: sensor.date
       value_template: "{{ states.zone | list | length }}"
 
-  #----- Input Booleans
+    #----- Input Booleans
     count_input_booleans:
       entity_id: sensor.date
       value_template: "{{ states.input_boolean | list | length }}"
 
-  #----- Input Numbers
+    #----- Input Numbers
     count_input_numbers:
       entity_id: sensor.date
       value_template: "{{ states.input_number | list | length }}"
 
-  #----- Input Texts
+    #----- Input Texts
     count_input_texts:
       entity_id: sensor.date
       value_template: "{{ states.input_text | list | length }}"
 
-  #----- Input Selects
+    #----- Input Selects
     count_input_selects:
       entity_id: sensor.date
       value_template: "{{ states.input_select | list | length }}"
 
-  #----- Input Date Times
+    #----- Input Date Times
     count_input_datetimes:
       entity_id: sensor.date
       value_template: "{{ states.input_datetime | list | length }}"
