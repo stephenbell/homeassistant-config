@@ -8,11 +8,6 @@
 purge_keep_days: 3
 include:
   entities:
-    - sensor.cpu_temp
-    - sensor.processor_use
-    - sensor.disk_use_percent
-    - sensor.memory_use_percent
-
     - sensor.dark_sky_humidity
     - sensor.dark_sky_temperature
 
