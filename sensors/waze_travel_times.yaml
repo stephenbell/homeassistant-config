@@ -12,16 +12,6 @@
   origin: Home
   destination: erie
   region: "US"
-  avoid_toll_roads: false
-
-#================
-#=== To Montrose
-#================
-- platform: waze_travel_time
-  name: "To Montrose"
-  origin: Home
-  destination: montrose
-  region: "US"
   avoid_toll_roads: true
 
 #=================

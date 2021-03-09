@@ -15,7 +15,6 @@ include:
     - sensor.dht_sensor_temperature
 
     - sensor.to_erie
-    - sensor.to_montrose
     - sensor.to_parachute
     - sensor.to_south_denver
 

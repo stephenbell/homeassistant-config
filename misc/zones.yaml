@@ -21,14 +21,6 @@
   longitude: !secret erie_longitude
   radius: 50
   icon: mdi:home-heart
-#=============
-#=== Montrose
-#=============
-- name: montrose
-  latitude: !secret montrose_latitude
-  longitude: !secret montrose_longitude
-  radius: 50
-  icon: mdi:home-heart
 
 #==============
 #=== Parachute
