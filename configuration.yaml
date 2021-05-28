@@ -46,6 +46,8 @@ group: !include_dir_merge_named groups/
 #===============
 #=== HACS Setup
 #===============
+# @link https://hacs.xyz/docs/configuration/legacy
+#
 hacs:
   token: !secret hacs_token
   sidepanel_title: Community
