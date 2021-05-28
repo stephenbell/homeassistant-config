@@ -43,6 +43,13 @@ frontend:
 #
 group: !include_dir_merge_named groups/
 
+#===============
+#=== HACS Setup
+#===============
+hacs:
+  token: !secret hacs_token
+  sidepanel_title: Community
+
 #========================================================
 #=== Enable support for tracking state changes over time
 #========================================================
