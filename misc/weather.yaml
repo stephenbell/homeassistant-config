@@ -23,5 +23,5 @@
 #==================================
 # @link https://github.com/alexander0042/pirate-weather-ha
 #
-#- platform: pirateweather
-#  api_key: !secret api_key_pirateweather
+- platform: pirateweather
+  api_key: !secret api_key_pirateweather

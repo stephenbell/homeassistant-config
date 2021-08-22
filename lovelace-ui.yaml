@@ -1,6 +1,6 @@
 background: var(--background-image)
 custom_header:
-  background: 'rgba(155, 155, 155, 0.25)'
+  background: rgba(155, 155, 155, 0.25)
   button_text:
     options: ':'
   compact_mode: true
@@ -9,22 +9,26 @@ custom_header:
 title: ''
 views:
   - badges:
+      - sensor.dht_sensor_humidity
       - sensor.dht_sensor_temperature
       - sun.sun
-      - media_player.samsung_un55f8000
+      - media_player.un55f8000
       - binary_sensor.updater
     cards:
       - current: true
         details: true
         entity: weather.dark_sky
         forecast: true
-        type: 'custom:weather-card'
+        type: custom:weather-card
+      - type: custom:weather-card
+        entity: weather.pirateweather
+        number_of_forecasts: '5'
       - entities:
           - entity: sensor.to_erie
           - entity: sensor.to_parachute
           - entity: sensor.to_south_denver
-        type: 'custom:travel-time-card'
-    icon: 'mdi:home-circle'
+        type: custom:travel-time-card
+    icon: mdi:home-circle
     path: default_view
     title: Main
   - badges: []
@@ -53,7 +57,7 @@ views:
         name: Temperature (72h)
         points_per_hour: 4
         show: null
-        type: 'custom:mini-graph-card'
+        type: custom:mini-graph-card
       - align_header: left
         align_state: left
         animate: true
@@ -74,13 +78,13 @@ views:
         name: Humidity (72h)
         points_per_hour: 4
         show: null
-        type: 'custom:mini-graph-card'
+        type: custom:mini-graph-card
       - aspect_ratio: 0%
         camera_image: camera.radar_wu_colorado
         entities: []
-        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+        image: https://www.home-assistant.io/images/merchandise/shirt-frontpage.png
         type: picture-glance
-    icon: 'mdi:weather-cloudy'
+    icon: mdi:weather-cloudy
     title: Weather
   - badges: []
     cards:
@@ -102,7 +106,7 @@ views:
         show_header_toggle: false
         title: Computer Switches
         type: entities
-    icon: 'mdi:monitor-cellphone-star'
+    icon: mdi:monitor-cellphone-star
     title: Devices
   - badges: []
     cards:
@@ -110,7 +114,7 @@ views:
           - entity: sensor.to_erie
           - entity: sensor.to_parachute
           - entity: sensor.to_south_denver
-        type: 'custom:travel-time-card'
+        type: custom:travel-time-card
       - align_header: left
         align_state: left
         animate: true
@@ -136,13 +140,13 @@ views:
         name: Historical Travel Time (72h)
         points_per_hour: 4
         show: null
-        type: 'custom:mini-graph-card'
-    icon: 'mdi:car'
+        type: custom:mini-graph-card
+    icon: mdi:car
     path: commuting
     title: Commuting
   - title: SpaceX
     path: spacex
-    icon: 'mdi:rocket'
+    icon: mdi:rocket
     badges: []
     cards:
       - type: entity

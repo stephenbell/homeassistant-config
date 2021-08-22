@@ -21,16 +21,9 @@
 
 # @link https://github.com/alexander0042/pirate-weather-ha
 #
-# you can also get a sensor data
-#- platform: pirateweather
-#  api_key: !secret api_key_pirateweather
-#  scan_interval: '00:15:00'
-#  monitored_conditions:
-#    - temperature
-#    - precip_probability
-#    - precip_type
-#    - humidity
-#    - cloud_cover
-#    - nearest_storm_distance
-#    - precip_intensity
-#    - wind_speed
+- platform: pirateweather
+  api_key: !secret api_key_pirateweather
+  scan_interval: '00:15:00'
+  monitored_conditions:
+    - temperature
+    - humidity
