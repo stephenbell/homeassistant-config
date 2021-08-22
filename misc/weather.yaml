@@ -7,11 +7,21 @@
   api_key: !secret api_key_darksky
   mode: daily
 
-#==================================
+
+#===================================
 #=== OpenWeatherMap weather service
-#==================================
+#===================================
 # @link https://www.home-assistant.io/integrations/openweathermap/
 #
 #- platform: openweathermap
 #  api_key: !secret api_key_openweathermap
 #  mode: freedaily
+
+
+#==================================
+#=== PirateWeather weather service
+#==================================
+# @link https://github.com/alexander0042/pirate-weather-ha
+#
+#- platform: pirateweather
+#  api_key: !secret api_key_pirateweather
