@@ -25,3 +25,4 @@
 #
 - platform: pirateweather
   api_key: !secret api_key_pirateweather
+  mode: daily
