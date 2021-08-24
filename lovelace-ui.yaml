@@ -15,14 +15,12 @@ views:
       - media_player.un55f8000
       - binary_sensor.updater
     cards:
-      - current: true
-        details: true
-        entity: weather.dark_sky
-        forecast: true
-        type: custom:weather-card
       - type: custom:weather-card
         entity: weather.pirateweather
         number_of_forecasts: '5'
+        current: true
+        forecast: true
+        hourly_forecast: false
       - entities:
           - entity: sensor.to_erie
           - entity: sensor.to_parachute
@@ -38,7 +36,7 @@ views:
         animate: true
         entities:
           - color: '#d800f5'
-            entity: sensor.dark_sky_temperature
+            entity: sensor.pirateweather_temperature
             name: Outdoor
             show_state: true
             state_adaptive_color: true
@@ -63,7 +61,7 @@ views:
         animate: true
         entities:
           - color: '#00d62b'
-            entity: sensor.dark_sky_humidity
+            entity: sensor.pirateweather_humidity
             name: Outdoor
             show_state: true
             state_adaptive_color: true

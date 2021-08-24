@@ -8,8 +8,10 @@
 purge_keep_days: 3
 include:
   entities:
-    - sensor.dark_sky_humidity
-    - sensor.dark_sky_temperature
+    - sensor.pirateweather_humidity
+    - sensor.pirateweather_temperature
+
+    - sensor.freezing_point
 
     - sensor.dht_sensor_humidity
     - sensor.dht_sensor_temperature
