@@ -4,6 +4,16 @@
 # @link https://www.home-assistant.io/integrations/waze_travel_time/
 #
 
+#=========================
+#=== To Conifer
+#=========================
+- platform: waze_travel_time
+  name: "To Conifer"
+  origin: Home
+  destination: conifer
+  region: "US"
+  avoid_toll_roads: true
+
 #============
 #=== To Erie
 #============

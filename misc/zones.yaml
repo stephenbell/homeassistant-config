@@ -13,6 +13,15 @@
   radius: 50
   icon: mdi:home-heart
 
+#============
+#=== Conifer
+#============
+- name: conifer
+  latitude: !secret conifer_latitude
+  longitude: !secret conifer_longitude
+  radius: 50
+  icon: mdi:home-heart
+
 #=========
 #=== Erie
 #=========

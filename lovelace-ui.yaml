@@ -17,11 +17,12 @@ views:
     cards:
       - type: custom:weather-card
         entity: weather.pirateweather
-        number_of_forecasts: '5'
+        number_of_forecasts: '8'
         current: true
         forecast: true
         hourly_forecast: false
       - entities:
+          - entity: sensor.to_conifer
           - entity: sensor.to_erie
           - entity: sensor.to_parachute
           - entity: sensor.to_south_denver
@@ -109,6 +110,7 @@ views:
   - badges: []
     cards:
       - entities:
+          - entity: sensor.to_conifer
           - entity: sensor.to_erie
           - entity: sensor.to_parachute
           - entity: sensor.to_south_denver
