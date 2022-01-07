@@ -1,8 +1,0 @@
-#=================================
-#=== Weather Undergound radar map
-#=================================
-# @link https://www.wunderground.com/weather-radar/
-#
-- platform: generic
-  still_image_url: 'https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?num=6&type=N0R&mapx=400&mapy=240&brand=wui&delay=15&frame=0&scale=1&transx=0&transy=0&severe=1&smooth=0&centerx=400&centery=240&station=FTG&rainsnow=1&lightning=0&noclutter=0&showlabels=1&showstorms=0&rand=26319691'
-  name: Radar WU Colorado
