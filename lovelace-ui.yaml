@@ -78,11 +78,6 @@ views:
         points_per_hour: 4
         show: null
         type: custom:mini-graph-card
-      - aspect_ratio: 0%
-        camera_image: camera.radar_wu_colorado
-        entities: []
-        image: https://www.home-assistant.io/images/merchandise/shirt-frontpage.png
-        type: picture-glance
     icon: mdi:weather-cloudy
     title: Weather
   - badges: []
