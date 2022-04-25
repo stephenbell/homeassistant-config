@@ -10,6 +10,7 @@
     - temperature
     - humidity
 
+
 #=====================
 #=== Template sensors
 #=====================
@@ -17,8 +18,9 @@
 #
 - platform: template
   sensors:
-    #----- Freezing Point
+
+  #----- Freezing Point
     freezing_point:
-      value_template: "32"
+      value_template: 32
       friendly_name: Freezing Point
-      unit_of_measurement: "°F"
+      unit_of_measurement: '°F'
