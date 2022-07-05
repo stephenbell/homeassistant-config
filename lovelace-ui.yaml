@@ -13,8 +13,12 @@ views:
       - sensor.dht_sensor_temperature
       - sun.sun
       - media_player.un55f8000
-      - binary_sensor.updater
     cards:
+      - type: entities
+        entities:
+          - entity: sensor.broadlink_rm4_mini_temperature
+          - entity: sensor.broadlink_rm4_mini_humidity
+        title: Broadlink RM4 mini
       - type: custom:weather-card
         entity: weather.pirateweather
         number_of_forecasts: '8'
@@ -38,12 +42,12 @@ views:
         entities:
           - color: '#d800f5'
             entity: sensor.pirateweather_temperature
-            name: Outdoor
+            name: Pirate Weather
             show_state: true
             state_adaptive_color: true
           - color: '#dbe300'
             entity: sensor.dht_sensor_temperature
-            name: Indoor
+            name: Dining Room
             show_state: true
             state_adaptive_color: true
           - color: '#ff0000'
@@ -63,12 +67,12 @@ views:
         entities:
           - color: '#00d62b'
             entity: sensor.pirateweather_humidity
-            name: Outdoor
+            name: Pirate Weather
             show_state: true
             state_adaptive_color: true
           - color: '#1259f3'
             entity: sensor.dht_sensor_humidity
-            name: Indoor
+            name: Dining Room
             show_state: true
             state_adaptive_color: true
         hours_to_show: 72

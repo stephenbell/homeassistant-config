@@ -15,6 +15,9 @@ include:
 
     - sensor.dht_sensor_humidity
     - sensor.dht_sensor_temperature
+    
+    - sensor.broadlink_rm4_mini_temperature
+    - sensor.broadlink_rm4_mini_humidity
 
     - sensor.to_conifer
     - sensor.to_erie
