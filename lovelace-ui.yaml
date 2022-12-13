@@ -9,16 +9,12 @@ custom_header:
 title: ''
 views:
   - badges:
-      - sensor.dht_sensor_humidity
-      - sensor.dht_sensor_temperature
       - sun.sun
       - media_player.un55f8000
+      - sensor.broadlink_rm4_mini_temperature
+      - sensor.broadlink_rm4_mini_humidity
+      - switch.sonoff_s31_lite_zb_switch
     cards:
-      - type: entities
-        entities:
-          - entity: sensor.broadlink_rm4_mini_temperature
-          - entity: sensor.broadlink_rm4_mini_humidity
-        title: Broadlink RM4 mini
       - type: custom:weather-card
         entity: weather.pirateweather
         number_of_forecasts: '8'
@@ -46,7 +42,7 @@ views:
             show_state: true
             state_adaptive_color: true
           - color: '#dbe300'
-            entity: sensor.dht_sensor_temperature
+            entity: sensor.broadlink_rm4_mini_temperature
             name: Dining Room
             show_state: true
             state_adaptive_color: true
@@ -71,7 +67,7 @@ views:
             show_state: true
             state_adaptive_color: true
           - color: '#1259f3'
-            entity: sensor.dht_sensor_humidity
+            entity: sensor.broadlink_rm4_mini_humidity
             name: Dining Room
             show_state: true
             state_adaptive_color: true
@@ -114,9 +110,7 @@ views:
           - entity: sensor.to_parachute
           - entity: sensor.to_south_denver
         type: custom:travel-time-card
-      - align_header: left
-        align_state: left
-        animate: true
+      - animate: true
         entities:
           - entity: sensor.to_erie
             index: 2
@@ -174,3 +168,36 @@ views:
           - sensor.next_launch_site
           - sensor.next_launch_time
         title: SpaceX
+  - theme: Backend-selected
+    title: Lights
+    path: lights
+    icon: mdi:lightbulb
+    badges: []
+    cards:
+      - type: entities
+        entities:
+          - entity: button.sonoff_s31_lite_zb_identifybutton
+          - entity: sensor.sonoff_s31_lite_zb_lqi
+          - entity: sensor.sonoff_s31_lite_zb_rssi
+          - entity: switch.sonoff_s31_lite_zb_switch
+        title: SONOFF Info
+        state_color: true
+      - animate: true
+        entities:
+          - entity: sensor.sonoff_s31_lite_zb_lqi
+            index: 1
+            name: Link Quality (LQI)
+            show_state: true
+            state_adaptive_color: true
+          - entity: sensor.sonoff_s31_lite_zb_rssi
+            index: 2
+            name: Received Signal Stregnth (RSSI)
+            show_state: true
+            state_adaptive_color: true
+        hours_to_show: 72
+        labels: true
+        line_width: 2
+        name: Historical Travel Time (72h)
+        points_per_hour: 4
+        show: null
+        type: custom:mini-graph-card

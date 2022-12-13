@@ -13,11 +13,15 @@ include:
 
     - sensor.freezing_point
 
-    - sensor.dht_sensor_humidity
-    - sensor.dht_sensor_temperature
+    #- sensor.dht_sensor_humidity
+    #- sensor.dht_sensor_temperature
     
     - sensor.broadlink_rm4_mini_temperature
     - sensor.broadlink_rm4_mini_humidity
+
+    - sensor.sonoff_s31_lite_zb_lqi
+    - sensor.sonoff_s31_lite_zb_rssi
+    - switch.sonoff_s31_lite_zb_switch
 
     - sensor.to_conifer
     - sensor.to_erie

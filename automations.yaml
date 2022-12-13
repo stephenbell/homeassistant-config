@@ -1,0 +1,56 @@
+- &id001
+  id: '1666655293297'
+  alias: Jet Ski light auto OFF
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.broadlink_rm4_mini_temperature
+  condition:
+  - condition: and
+    conditions:
+    - type: is_temperature
+      condition: device
+      device_id: 58d1236f585f57395de14f6b8f38cb95
+      entity_id: sensor.broadlink_rm4_mini_temperature
+      domain: sensor
+      above: 40
+    - condition: device
+      type: is_on
+      device_id: 2cc64e82be6e4ba8d0f1512dbcc77ce9
+      entity_id: switch.sonoff_s31_lite_zb_switch
+      domain: switch
+  action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.sonoff_s31_lite_zb_switch
+  mode: single
+- *id001
+- id: '1666667399975'
+  alias: Jet Ski light auto ON
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.broadlink_rm4_mini_temperature
+  condition:
+  - condition: and
+    conditions:
+    - type: is_temperature
+      condition: device
+      device_id: 58d1236f585f57395de14f6b8f38cb95
+      entity_id: sensor.broadlink_rm4_mini_temperature
+      domain: sensor
+      below: 40
+    - condition: device
+      type: is_off
+      device_id: 2cc64e82be6e4ba8d0f1512dbcc77ce9
+      entity_id: switch.sonoff_s31_lite_zb_switch
+      domain: switch
+  action:
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.sonoff_s31_lite_zb_switch
+  mode: single
