@@ -43,7 +43,7 @@ views:
             state_adaptive_color: true
           - color: '#dbe300'
             entity: sensor.broadlink_rm4_mini_temperature
-            name: Dining Room
+            name: Garage
             show_state: true
             state_adaptive_color: true
           - color: '#ff0000'
@@ -68,7 +68,7 @@ views:
             state_adaptive_color: true
           - color: '#1259f3'
             entity: sensor.broadlink_rm4_mini_humidity
-            name: Dining Room
+            name: Garage
             show_state: true
             state_adaptive_color: true
         hours_to_show: 72

@@ -69,7 +69,6 @@ homeassistant:
     - !secret allowlist_external_dirs
   country: US
   currency: USD
-  customize: !include customize.yaml
   elevation: !secret home_elevation
   external_url: !secret external_url
   latitude: !secret home_latitude
