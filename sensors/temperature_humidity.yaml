@@ -3,12 +3,12 @@
 #=============================
 # @link https://www.home-assistant.io/integrations/dht/
 #
-- platform: dht
-  sensor: DHT22
-  pin: 2
-  monitored_conditions:
-    - temperature
-    - humidity
+#- platform: dht
+#  sensor: DHT22
+#  pin: 2
+#  monitored_conditions:
+#    - temperature
+#    - humidity
 
 
 #=====================
