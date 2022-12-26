@@ -1,7 +1,0 @@
-#===================
-#=== Living room TV
-#===================
-- platform: samsungtv
-  host: !secret ip_addr_samsungtv_55
-  name: "Samsung TV"
-  mac: !secret mac_addr_samsungtv_55

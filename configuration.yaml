@@ -91,13 +91,6 @@ http:
 #
 influxdb: !include misc/influxdb.yaml
 
-#======================================
-#=== Manually configured Media players
-#======================================
-# @link https://home-assistant.io/components/media_player/
-#
-#media_player: !include misc/media_players.yaml
-
 #============
 #=== Logbook
 #============
