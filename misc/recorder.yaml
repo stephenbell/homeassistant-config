@@ -8,24 +8,24 @@
 purge_keep_days: 3
 include:
   entities:
+    # Weather Data
     - sensor.pirateweather_humidity
     - sensor.pirateweather_temperature
-
     - sensor.freezing_point
-
     #- sensor.dht_sensor_humidity
     #- sensor.dht_sensor_temperature
-    
+
+    # Garage Data
     - sensor.broadlink_rm4_mini_temperature
     - sensor.broadlink_rm4_mini_humidity
-
     - sensor.sonoff_s31_lite_zb_lqi
     - sensor.sonoff_s31_lite_zb_rssi
     - switch.sonoff_s31_lite_zb_switch
 
+    # Waze Data
     - sensor.to_conifer
     - sensor.to_erie
-    - sensor.to_parachute
+    - sensor.to_moab
     - sensor.to_south_denver
 
 exclude:

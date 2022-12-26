@@ -14,5 +14,5 @@ exclude:
   entities:
     - sensor.to_conifer
     - sensor.to_erie
-    - sensor.to_parachute
+    - sensor.to_moab
     - sensor.to_south_denver

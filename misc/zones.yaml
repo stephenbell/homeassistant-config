@@ -31,6 +31,15 @@
   radius: 50
   icon: mdi:home-heart
 
+#=========
+#=== Moab
+#=========
+- name: moab
+  latitude: !secret moab_latitude
+  longitude: !secret moab_longitude
+  radius: 50
+  icon: mdi:home-heart
+
 #==============
 #=== Parachute
 #==============
