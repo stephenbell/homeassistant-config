@@ -57,7 +57,7 @@ hacs:
 #========================================================
 # @link https://home-assistant.io/components/history/
 #
-history: !include misc/history.yaml
+history:
 
 #===========================================
 #=== Setup basic Home Assistant information
