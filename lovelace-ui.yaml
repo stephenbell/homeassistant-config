@@ -1,203 +1,44 @@
-background: var(--background-image)
-custom_header:
-  background: rgba(155, 155, 155, 0.25)
-  button_text:
-    options: ':'
-  compact_mode: true
-  swipe_animate: fade
-  swipe_prevent_default: true
-title: ''
+title: Home
 views:
-  - badges:
-      - sun.sun
-      - media_player.un55f8000
-      - sensor.broadlink_rm4_mini_temperature
-      - sensor.broadlink_rm4_mini_humidity
-      - switch.sonoff_s31_lite_zb_switch
+  - path: default_view
+    title: Home
     cards:
-      - type: custom:weather-card
-        entity: weather.pirateweather
-        number_of_forecasts: '8'
-        current: true
-        forecast: true
-        hourly_forecast: false
-      - entities:
-          - entity: sensor.to_conifer
-          - entity: sensor.to_erie
-          - entity: sensor.to_moab
-          - entity: sensor.to_south_denver
-        type: custom:travel-time-card
-    icon: mdi:home-circle
-    path: default_view
-    title: Main
-  - badges: []
-    cards:
-      - align_header: left
-        align_state: left
-        animate: true
+      - show_name: true
+        show_icon: true
+        show_state: true
+        type: glance
         entities:
-          - color: '#d800f5'
-            entity: sensor.pirateweather_temperature
-            name: Pirate Weather
-            show_state: true
-            state_adaptive_color: true
-          - color: '#dbe300'
-            entity: sensor.broadlink_rm4_mini_temperature
-            name: Garage
-            show_state: true
-            state_adaptive_color: true
-          - color: '#ff0000'
-            entity: sensor.freezing_point
-            show_fill: false
-            state_adaptive_color: true
-        hours_to_show: 72
-        labels: true
-        line_width: 1
-        name: Temperature (72h)
-        points_per_hour: 4
-        show: null
-        type: custom:mini-graph-card
-      - align_header: left
-        align_state: left
-        animate: true
-        entities:
-          - color: '#00d62b'
-            entity: sensor.pirateweather_humidity
-            name: Pirate Weather
-            show_state: true
-            state_adaptive_color: true
-          - color: '#1259f3'
-            entity: sensor.broadlink_rm4_mini_humidity
-            name: Garage
-            show_state: true
-            state_adaptive_color: true
-        hours_to_show: 72
-        labels: true
-        line_width: 1
-        name: Humidity (72h)
-        points_per_hour: 4
-        show: null
-        type: custom:mini-graph-card
-    icon: mdi:weather-cloudy
-    title: Weather
-  - badges: []
-    cards:
-      - card:
-          show_header_toggle: false
-          title: TVs
-        entities:
-          - media_player.samsung_un55f8000
-          - media_player.family_room_tv
-        state_filter:
-          - 'on'
-          - 'off'
-        type: entity-filter
-      - entity: media_player.chromecast_ultra
-        type: media-control
-      - entities:
-          - entity: switch.pops_desktop
-          - entity: switch.stephen_s_desktop
-        show_header_toggle: false
-        title: Computer Switches
-        type: entities
-    icon: mdi:monitor-cellphone-star
-    title: Devices
-  - badges: []
-    cards:
-      - entities:
-          - entity: sensor.to_conifer
-          - entity: sensor.to_erie
-          - entity: sensor.to_moab
-          - entity: sensor.to_south_denver
-        type: custom:travel-time-card
-      - animate: true
-        entities:
-          - entity: sensor.to_erie
-            index: 2
-            name: Erie
-            show_state: true
-            state_adaptive_color: true
-          - entity: sensor.to_south_denver
-            index: 1
-            name: South Denver
-            show_state: true
-            state_adaptive_color: true
-          - entity: sensor.to_moab
-            index: 3
-            name: Moab
-            show_state: true
-            state_adaptive_color: true
-        hours_to_show: 72
-        labels: true
-        line_width: 2
-        name: Historical Travel Time (72h)
-        points_per_hour: 4
-        show: null
-        type: custom:mini-graph-card
-    icon: mdi:car
-    path: commuting
-    title: Commuting
-  - title: SpaceX
-    path: spacex
-    icon: mdi:rocket
-    badges: []
-    cards:
-      - type: entity
-        entity: sensor.starman_distance
-      - type: gauge
-        entity: sensor.starman_speed
-        min: 0
-        max: 100000
+          - entity: sensor.broadlink_rm4_mini_temperature
+          - entity: sensor.broadlink_rm4_mini_humidity
+          - entity: media_player.un55f8000
+      - show_current: true
+        show_forecast: true
+        type: weather-forecast
+        entity: weather.forecast_home
+        forecast_type: daily
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        entity: switch.sonoff_s31_lite_zb_switch
+        name: Lamp
       - type: entities
         entities:
-          - sensor.latest_launch_day
-          - sensor.latest_launch_mission
-          - sensor.latest_launch_payload
-          - sensor.latest_launch_rocket
-          - sensor.latest_launch_site
-          - sensor.latest_launch_time
-          - binary_sensor.launch_within_20_minutes
-          - binary_sensor.launch_within_24_hours
-          - sensor.next_confirmed_launch_day
-          - sensor.next_confirmed_launch_time
-          - binary_sensor.next_launch_confirmed
-          - sensor.next_launch_day
-          - sensor.next_launch_mission
-          - sensor.next_launch_payload
-          - sensor.next_launch_rocket
-          - sensor.next_launch_site
-          - sensor.next_launch_time
-        title: SpaceX
-  - theme: Backend-selected
-    title: Lights
-    path: lights
-    icon: mdi:lightbulb
-    badges: []
-    cards:
+          - entity: sensor.arris_sbg6700_ac_download_speed
+            name: Download speed
+          - entity: sensor.arris_sbg6700_ac_upload_speed
+            name: Upload speed
+        title: ARRIS SBG6700-AC
+      - graph: line
+        type: sensor
+        entity: sensor.arris_sbg6700_ac_download_speed
+        detail: 2
+        hours_to_show: 24
+      - type: history-graph
+        entities:
+          - entity: media_player.un55f8000
       - type: entities
         entities:
-          - entity: button.sonoff_s31_lite_zb_identifybutton
-          - entity: sensor.sonoff_s31_lite_zb_lqi
-          - entity: sensor.sonoff_s31_lite_zb_rssi
-          - entity: switch.sonoff_s31_lite_zb_switch
-        title: SONOFF Info
-        state_color: true
-      - animate: true
-        entities:
-          - entity: sensor.sonoff_s31_lite_zb_lqi
-            index: 1
-            name: Link Quality (LQI)
-            show_state: true
-            state_adaptive_color: true
-          - entity: sensor.sonoff_s31_lite_zb_rssi
-            index: 2
-            name: Received Signal Stregnth (RSSI)
-            show_state: true
-            state_adaptive_color: true
-        hours_to_show: 72
-        labels: true
-        line_width: 2
-        name: Historical Travel Time (72h)
-        points_per_hour: 4
-        show: null
-        type: custom:mini-graph-card
+          - entity: button.wake_on_lan_e0_d5_5e_6d_65_d9
+          - entity: button.wake_on_lan_70_8b_cd_54_5a_6b

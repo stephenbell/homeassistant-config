@@ -1,133 +1,15 @@
-#================
-#=== Automations
-#================
-# @link https://home-assistant.io/components/automation/
-#
-automation: !include automations.yaml
 
-#============
-#=== Cameras
-#============
-# @link https://home-assistant.io/components/camera/
-#
-camera: !include_dir_merge_list cameras/
-
-#=======================================
-#=== Enable default set of integrations
-#=======================================
-# @link https://home-assistant.io/components/default_config/
-#
+# Loads default set of integrations. Do not remove.
 default_config:
 
-#========================================
-#=== Discover some devices automatically
-#========================================
-# @link https://home-assistant.io/components/discovery/
-#
-#discovery:
-#  ignore:
-#    - igd
-
-#===========================
-#=== Enable the official UI
-#===========================
-# @link https://home-assistant.io/components/frontend/
-#
+# Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
 
-#=================================================
-#=== Combine entities into groups and organize UI
-#=================================================
-# @link https://home-assistant.io/components/group/
-#
-group: !include_dir_merge_named groups/
-
-#========================================================
-#=== Enable support for tracking state changes over time
-#========================================================
-# @link https://home-assistant.io/components/history/
-#
-history:
-
-#===========================================
-#=== Setup basic Home Assistant information
-#===========================================
-# @link https://www.home-assistant.io/docs/configuration/basic/
-#
-homeassistant:
-  allowlist_external_dirs:
-    - !secret allowlist_external_dirs
-  country: US
-  currency: USD
-  elevation: !secret home_elevation
-  external_url: !secret external_url
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-
-#==========================
-#=== Enable the web server
-#==========================
-# @link https://home-assistant.io/components/http/
-#
-http:
-  ssl_certificate: !secret http_ssl_certificate
-  ssl_key: !secret http_ssl_key
-
-#===========================================
-#=== InfluxDB to record/graph state changes
-#===========================================
-# @link https://home-assistant.io/components/influxdb
-#
-influxdb: !include misc/influxdb.yaml
-
-#============
-#=== Logbook
-#============
-logbook: !include misc/logbook.yaml
-
-#======================
-#=== Database recorder
-#======================
-# Limit the number of tracked entities and length of history.
-#
-# @link https://home-assistant.io/components/recorder/
-#
-recorder: !include misc/recorder.yaml
-
-#============
-#=== Scripts
-#============
-# @link https://home-assistant.io/components/script/
-#
-script: !include_dir_merge_list scripts/
-
-#============
-#=== Sensors
-#============
-# @link https://home-assistant.io/components/sensor/
-#
-sensor: !include_dir_merge_list sensors/
-
-#=============
-#=== Switches
-#=============
-# @link https://home-assistant.io/components/switch/
-#
-switch: !include_dir_merge_list switches/
-
-#============
-#=== Weather
-#============
-# @link https://home-assistant.io/components/weather/
-#
-weather: !include misc/weather.yaml
-
-#==========
-#=== Zones
-#==========
-# @link https://home-assistant.io/components/zone/
-#
-zone: !include misc/zones.yaml
-
+automation: !include automations.yaml
+script: !include scripts.yaml
 scene: !include scenes.yaml
+
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem

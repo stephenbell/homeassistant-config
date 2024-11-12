@@ -1,56 +1,41 @@
-- &id001
-  id: '1666655293297'
-  alias: Jet Ski light auto OFF
+- id: '1718808545650'
+  alias: Evening Lamp On
   description: ''
   trigger:
-  - platform: state
-    entity_id:
-    - sensor.broadlink_rm4_mini_temperature
-  condition:
-  - condition: and
-    conditions:
-    - type: is_temperature
-      condition: device
-      device_id: 58d1236f585f57395de14f6b8f38cb95
-      entity_id: sensor.broadlink_rm4_mini_temperature
-      domain: sensor
-      above: 40
-    - condition: device
-      type: is_on
-      device_id: 2cc64e82be6e4ba8d0f1512dbcc77ce9
-      entity_id: switch.sonoff_s31_lite_zb_switch
-      domain: switch
+  - platform: sun
+    event: sunset
+    offset: -00:10:00
+  condition: []
   action:
-  - service: switch.turn_off
-    data: {}
-    target:
-      entity_id: switch.sonoff_s31_lite_zb_switch
+  - type: turn_on
+    device_id: 68e699c0fcaaf717287eba44c154522d
+    entity_id: d38eff77e9d04884b37fb00347a3e402
+    domain: switch
   mode: single
-- *id001
-- id: '1666667399975'
-  alias: Jet Ski light auto ON
+- id: '1718808682084'
+  alias: Evening Lamp Off
   description: ''
   trigger:
-  - platform: state
-    entity_id:
-    - sensor.broadlink_rm4_mini_temperature
-  condition:
-  - condition: and
-    conditions:
-    - type: is_temperature
-      condition: device
-      device_id: 58d1236f585f57395de14f6b8f38cb95
-      entity_id: sensor.broadlink_rm4_mini_temperature
-      domain: sensor
-      below: 40
-    - condition: device
-      type: is_off
-      device_id: 2cc64e82be6e4ba8d0f1512dbcc77ce9
-      entity_id: switch.sonoff_s31_lite_zb_switch
-      domain: switch
+  - platform: time
+    at: '21:36:00'
+  condition: []
   action:
-  - service: switch.turn_on
-    data: {}
-    target:
-      entity_id: switch.sonoff_s31_lite_zb_switch
+  - type: turn_off
+    device_id: 68e699c0fcaaf717287eba44c154522d
+    entity_id: d38eff77e9d04884b37fb00347a3e402
+    domain: switch
+  mode: single
+- id: '1719590176846'
+  alias: Morning Lamp Off
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: 00:05:00
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 68e699c0fcaaf717287eba44c154522d
+    entity_id: d38eff77e9d04884b37fb00347a3e402
+    domain: switch
   mode: single
